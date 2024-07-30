@@ -44,7 +44,7 @@ const Skills = () => {
       // animate="animate"
       whileInView="animate"
     >
-      <motion.h1 variants={textVariants}>What I Know</motion.h1>
+      <motion.h1 variants={textVariants}>What I Know </motion.h1>
       <motion.div className="skillContainer" variants={textVariants}>
         {items.map((item) => (
           <motion.div

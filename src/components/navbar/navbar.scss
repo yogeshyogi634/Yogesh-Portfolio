@@ -10,15 +10,8 @@
     height: 100%;
 
     span {
+      font-size: 24px;
       font-weight: bold;
-      opacity: 0;
-      animation: fadeIn 3s forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
     }
 
     .social {

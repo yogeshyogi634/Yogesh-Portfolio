@@ -4,14 +4,28 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { motion } from "framer-motion";
+import Sidebar from "../sidebar/Sidebar";
 
 const Navbar = () => {
   return (
     <div className="navbar">
       {/* Sidebar */}
+      <Sidebar />
       <div className="wrapper">
-        <span>YOGESH</span>
-        <div className="social">
+        <motion.span
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <em>&lt;Yogesh /&gt;</em>
+        </motion.span>
+        <motion.div
+          className="social"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <a href="https://github.com/yogeshyogi634/" target="_blank">
             <GitHubIcon />
           </a>
@@ -30,7 +44,7 @@ const Navbar = () => {
           <a href="#">
             <FacebookIcon />
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

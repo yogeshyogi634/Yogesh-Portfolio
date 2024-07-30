@@ -18,7 +18,7 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <em>&lt;Yogesh /&gt;</em>
+          <span>&lt;Yogesh /&gt;</span>
         </motion.span>
         <motion.div
           className="social"

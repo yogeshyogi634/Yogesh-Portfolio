@@ -1,6 +1,7 @@
 import "./skills.scss";
 import { items } from "./data";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const textVariants = {
   initial: {
@@ -36,14 +37,20 @@ const skillVariants = {
 };
 
 const Skills = () => {
+  const ref = useRef();
+
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <>
+    <div>
       <motion.div
         className="skills"
         variants={textVariants}
         initial="initial"
-        animate="animate"
+        // animate="animate"
         // whileInView="animate"
+        ref={ref}
+        // animate={"animate"}
+        animate={window.innerWidth <= 738 ? "animate" : isInView && "animate"}
       >
         <motion.h1 variants={textVariants}>What I Know </motion.h1>
         <motion.div className="skillContainer" variants={textVariants}>
@@ -60,7 +67,7 @@ const Skills = () => {
           ))}
         </motion.div>
       </motion.div>
-    </>
+    </div>
   );
 };
 

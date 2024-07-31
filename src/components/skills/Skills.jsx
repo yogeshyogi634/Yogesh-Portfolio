@@ -37,28 +37,30 @@ const skillVariants = {
 
 const Skills = () => {
   return (
-    <motion.div
-      className="skills"
-      variants={textVariants}
-      initial="initial"
-      // animate="animate"
-      whileInView="animate"
-    >
-      <motion.h1 variants={textVariants}>What I Know </motion.h1>
-      <motion.div className="skillContainer" variants={textVariants}>
-        {items.map((item) => (
-          <motion.div
-            className="skill"
-            key={item.id}
-            variants={textVariants}
-            whileHover={skillVariants.whileHover}
-          >
-            <motion.img src={item.img} alt="Skills Image" />
-            <motion.p>{item.name}</motion.p>
-          </motion.div>
-        ))}
+    <>
+      <motion.div
+        className="skills"
+        variants={textVariants}
+        initial="initial"
+        animate="animate"
+        // whileInView="animate"
+      >
+        <motion.h1 variants={textVariants}>What I Know </motion.h1>
+        <motion.div className="skillContainer" variants={textVariants}>
+          {items.map((item) => (
+            <motion.div
+              className="skill"
+              key={item.id}
+              variants={textVariants}
+              whileHover={skillVariants.whileHover}
+            >
+              <motion.img src={item.img} alt="Skills Image" />
+              <motion.p>{item.name}</motion.p>
+            </motion.div>
+          ))}
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </>
   );
 };
 

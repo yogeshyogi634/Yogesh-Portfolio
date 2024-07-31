@@ -9,7 +9,7 @@ import Skills from "./components/skills/Skills";
 
 function App() {
   return (
-    <div>
+    <section>
       <Cursor />
       <section id="Home">
         <Navbar />
@@ -28,7 +28,7 @@ function App() {
       <section id="Contact">
         <Contact />
       </section>
-    </div>
+    </section>
   );
 }
 

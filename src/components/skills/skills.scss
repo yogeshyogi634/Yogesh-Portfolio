@@ -4,12 +4,20 @@
   width: 100%;
   height: 100%;
 
+  @include desktop {
+    padding: 40px;
+  }
+
   h1 {
     text-align: center;
     font-size: 60px;
     color: white;
     padding: 60px;
     letter-spacing: 12px;
+
+    @include desktop {
+      padding: 30px;
+    }
 
     @include tablet {
       padding: 16px;
@@ -35,6 +43,14 @@
     justify-content: center;
     column-gap: 150px;
     row-gap: 100px;
+
+    @include desktop {
+      width: auto;
+      height: 80%;
+      padding: 10px;
+      column-gap: 50px;
+      row-gap: 50px;
+    }
 
     @include tablet {
       width: auto;
@@ -78,6 +94,7 @@
       p {
         font-size: 18px;
         color: #0c0c1d;
+        font-weight: 500;
 
         @include mobile {
           font-size: 14px;

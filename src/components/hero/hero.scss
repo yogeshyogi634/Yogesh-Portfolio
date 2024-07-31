@@ -11,6 +11,12 @@
     height: 100%;
     margin: auto;
 
+    @include biggerDesktop {
+      padding: 60px;
+    }
+    @include desktop {
+      padding: 80px;
+    }
     @include tablet {
       padding: 40px;
     }
@@ -22,6 +28,10 @@
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+
+      @include desktop {
+        gap: 30px;
+      }
 
       @include tablet {
         gap: 20px;
@@ -47,13 +57,30 @@
       }
 
       h1 {
-        font-size: 88px;
+        font-size: 72px;
+
+        @include biggerDesktop {
+          font-size: 46px;
+        }
+        @include desktop {
+          font-size: 46px;
+        }
 
         @include tablet {
           font-size: 44px;
         }
         @include mobile {
-          font-size: 36px;
+          font-size: 28px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        color: darkgray;
+
+        @include mobile {
+          text-align: center;
+          font-size: 16px;
         }
       }
 
@@ -89,6 +116,10 @@
     top: 0;
     right: 0;
 
+    @include desktop {
+      height: 100%;
+      width: 60%;
+    }
     @include tablet {
       height: 100%;
       width: 60%;
@@ -106,6 +137,9 @@
       height: 100%;
       object-fit: cover;
 
+      @include desktop {
+        // object-fit: contain;
+      }
       @include tablet {
         object-fit: contain;
       }

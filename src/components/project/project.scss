@@ -45,6 +45,13 @@
       justify-content: center;
       gap: 50px;
 
+      @include biggerDesktop {
+        padding: 50px;
+      }
+      @include desktop {
+        padding: 50px;
+      }
+
       @include tablet {
         padding: 30px;
       }
@@ -88,7 +95,7 @@
         }
 
         h2 {
-          font-size: 72px;
+          font-size: 62px;
 
           @include tablet {
             font-size: 46px;

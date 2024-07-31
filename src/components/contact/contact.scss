@@ -8,6 +8,13 @@
   align-items: center;
   gap: 50px;
 
+  @include biggerDesktop {
+    padding: 40px;
+  }
+  @include desktop {
+    padding: 40px;
+  }
+
   @include tablet {
     padding: 40px;
   }

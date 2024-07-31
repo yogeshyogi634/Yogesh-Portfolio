@@ -12,6 +12,10 @@
   h1 {
     font-size: 100px;
 
+    @include tablet {
+      font-size: 68px;
+      text-align: center;
+    }
     @include mobile {
       font-size: 72px;
       text-align: center;

@@ -11,6 +11,10 @@
     justify-content: space-between;
     height: 100%;
 
+    @include tablet {
+      width: auto;
+      padding: 30px;
+    }
     @include mobile {
       width: auto;
       justify-content: flex-end;
@@ -22,6 +26,9 @@
       font-weight: bold;
       cursor: default;
 
+      @include tablet {
+        margin-left: 80px;
+      }
       @include mobile {
         display: none;
       }

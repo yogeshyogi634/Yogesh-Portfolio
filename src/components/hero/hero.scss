@@ -11,6 +11,10 @@
     height: 100%;
     margin: auto;
 
+    @include tablet {
+      padding: 40px;
+    }
+
     .textContainer {
       width: 50%;
       height: 100%;
@@ -19,6 +23,9 @@
       justify-content: center;
       gap: 40px;
 
+      @include tablet {
+        gap: 20px;
+      }
       @include mobile {
         height: 50%;
         width: 100%;
@@ -31,6 +38,9 @@
         color: rebeccapurple;
         letter-spacing: 10px;
 
+        @include tablet {
+          font-size: 34px;
+        }
         @include mobile {
           font-size: 32px;
         }
@@ -39,6 +49,9 @@
       h1 {
         font-size: 88px;
 
+        @include tablet {
+          font-size: 44px;
+        }
         @include mobile {
           font-size: 36px;
         }
@@ -55,6 +68,9 @@
           font-weight: 400;
           cursor: pointer;
 
+          @include tablet {
+            padding: 16px;
+          }
           @include mobile {
             padding: 12px;
           }
@@ -73,6 +89,11 @@
     top: 0;
     right: 0;
 
+    @include tablet {
+      height: 100%;
+      width: 60%;
+    }
+
     @include mobile {
       height: 50%;
       width: 100%;
@@ -84,6 +105,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include tablet {
+        object-fit: contain;
+      }
     }
   }
   .slidingTextContainer {

@@ -1,8 +1,10 @@
+@import "../../app.scss";
+
 .skills {
   width: 100%;
   height: 100%;
   // background-color: white;
-  z-index: 999;
+  // z-index: 999;
 
   h1 {
     text-align: center;
@@ -11,6 +13,13 @@
     color: white;
     padding: 60px;
     letter-spacing: 12px;
+
+    @include mobile {
+      padding: 16px;
+      font-size: 20px;
+      text-align: center;
+      letter-spacing: 4px;
+    }
   }
 
   .skillContainer {
@@ -23,6 +32,13 @@
     justify-content: center;
     column-gap: 150px;
     row-gap: 100px;
+
+    @include mobile {
+      width: auto;
+      height: 90%;
+      padding: 10px;
+      gap: 30px;
+    }
 
     .skill {
       width: 120px;
@@ -39,6 +55,12 @@
       cursor: pointer;
       background-color: white;
 
+      @include mobile {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+      }
+
       img {
         width: 36px;
         height: 36px;
@@ -48,6 +70,10 @@
         font-size: 18px;
         // color: #0c0c1d;
         color: #0c0c1d;
+
+        @include mobile {
+          font-size: 14px;
+        }
       }
     }
   }

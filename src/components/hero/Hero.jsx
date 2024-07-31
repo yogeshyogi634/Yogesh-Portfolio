@@ -49,11 +49,13 @@ const Hero = () => {
           animate="animate"
         >
           <motion.h2 variants={textVariants}>YOGESH K U</motion.h2>
-          <motion.h1 variants={textVariants}>Web Developer</motion.h1>
+          <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
+          <motion.p variants={textVariants}>
+            Passionate about building robust web applications and crafting
+            seamless user experiences.
+          </motion.p>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>
-              See the Latest works
-            </motion.button>
+            <motion.button variants={textVariants}>View Resume</motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div>
           <motion.img
@@ -70,7 +72,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Full Stack Developer
+        Web Developer
       </motion.div>
       <div className="imageContainer">
         <img src="/hero3.png" alt="hero" />

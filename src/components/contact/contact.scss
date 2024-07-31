@@ -8,6 +8,17 @@
   align-items: center;
   gap: 50px;
 
+  @include biggerDesktop {
+    padding: 40px;
+  }
+  @include desktop {
+    padding: 40px;
+  }
+
+  @include tablet {
+    padding: 40px;
+  }
+
   @include mobile {
     width: 100%;
     padding: 10px;
@@ -32,6 +43,10 @@
       font-size: 100px;
       line-height: 88px;
 
+      @include tablet {
+        font-size: 46px;
+        line-height: 54px;
+      }
       @include mobile {
         font-size: 36px;
       }
@@ -65,6 +80,11 @@
       margin: auto;
       z-index: -1;
 
+      @include tablet {
+        width: 300px;
+        height: 300px;
+        display: flex;
+      }
       @include mobile {
         width: 300px;
         height: 300px;
@@ -86,6 +106,10 @@
         color: white;
         border-radius: 5px;
 
+        @include tablet {
+          padding: 14px;
+        }
+
         @include mobile {
           padding: 10px;
         }
@@ -98,6 +122,9 @@
         font-weight: 500;
         cursor: pointer;
 
+        @include tablet {
+          padding: 14px;
+        }
         @include mobile {
           padding: 10px;
         }

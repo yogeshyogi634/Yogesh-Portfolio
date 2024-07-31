@@ -5,27 +5,24 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
-    name: "React App",
-    img: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eu delectus voluptatem, fugiat",
+    name: "Youtube Clone",
+    img: "https://images.pexels.com/photos/3227986/pexels-photo-3227986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: "Built a YouTube clone using ReactJS, Styled Components, Node.js, Express.js, and MongoDB with user authentication and video streaming features.",
+    demo: "https://github.com/yogeshyogi634/Youtube-Clone",
   },
   {
     id: 2,
-    name: "Nextjs App",
-    img: "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eu delectus voluptatem, fugiat",
+    name: "Gaian Solution Website",
+    img: "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: "Created a company marketing website using React, Tailwind CSS, SCSS, Firebase, EmailJS, and Framer Motion for dynamic functionality, real-time database management, seamless email integration, and sleek animations.",
+    demo: "https://www.gaiansolutions.com/",
   },
   {
     id: 3,
-    name: "Music App",
-    img: "https://images.pexels.com/photos/879109/pexels-photo-879109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eu delectus voluptatem, fugiat",
-  },
-  {
-    id: 4,
-    name: "Blog App",
-    img: "https://images.pexels.com/photos/52608/pexels-photo-52608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eu delectus voluptatem, fugiat",
+    name: "E-Commerce Website",
+    img: "https://images.pexels.com/photos/6214476/pexels-photo-6214476.jpeg?auto=compress&cs=tinysrgb&w=600",
+    desc: "Built an e-commerce website using React, SCSS, and Strapi, incorporating seamless product management and a user-friendly shopping experience.",
+    demo: "https://github.com/yogeshyogi634/E-Commerce-App",
   },
 ];
 
@@ -48,7 +45,9 @@ const SingleProject = ({ item }) => {
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.name}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <a href={item.demo} target="_blank">
+              <button>See Demo</button>
+            </a>
           </motion.div>
         </div>
       </div>

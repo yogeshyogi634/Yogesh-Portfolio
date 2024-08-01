@@ -39,6 +39,15 @@ const sliderVariants = {
 };
 
 const Hero = () => {
+  const handleView = () => {
+    const resumeUrl = `/Yogesh Resume.pdf`;
+    window.open(resumeUrl, "_blank");
+  };
+
+  const handleScrollToContact = (e) => {
+    e.preventDefault();
+    document.getElementById("Contact").scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="hero">
       <div className="wrapper">
@@ -55,8 +64,12 @@ const Hero = () => {
             seamless user experiences.
           </motion.p>
           <motion.div className="buttons" variants={textVariants}>
-            <motion.button variants={textVariants}>View Resume</motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+            <motion.button variants={textVariants} onClick={handleView}>
+              View Resume
+            </motion.button>
+            <a href="#Contact" onClick={handleScrollToContact}>
+              <motion.button variants={textVariants}>Contact Me</motion.button>
+            </a>
           </motion.div>
           <motion.img
             src="/scroll.png"

@@ -106,6 +106,10 @@
         color: white;
         border-radius: 5px;
 
+        &::placeholder {
+          font-size: 16px;
+        }
+
         @include tablet {
           padding: 14px;
         }
@@ -122,6 +126,7 @@
         font-weight: 500;
         cursor: pointer;
         color: #0c0c1d;
+        font-size: 16px;
 
         @include tablet {
           padding: 14px;

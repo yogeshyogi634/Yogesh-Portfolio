@@ -33,9 +33,14 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_m7s5wvo", "template_dp8yin9", formRef.current, {
-        publicKey: "Q_3z3M--u_no21Ocb",
-      })
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        formRef.current,
+        {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           setSuccess(true);

@@ -10,6 +10,7 @@
     max-width: 1366px;
     height: 100%;
     margin: auto;
+    z-index: 20;
 
     @include biggerDesktop {
       padding: 60px;
@@ -94,6 +95,14 @@
           margin-right: 20px;
           font-weight: 400;
           cursor: pointer;
+          transition: all 0.4s ease;
+
+          &:hover {
+            scale: 1.1;
+            background-color: white;
+            color: #0c0c1d;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+          }
 
           @include tablet {
             padding: 16px;
@@ -148,10 +157,12 @@
   .slidingTextContainer {
     position: absolute;
     font-size: 50vh;
-    bottom: -40px;
+    bottom: 0px;
     white-space: nowrap;
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+    z-index: 10; // Ensure it's below the wrapper's z-index
+    pointer-events: none; // Make sure it doesn't block pointer events
   }
 }

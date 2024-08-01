@@ -59,7 +59,17 @@ const Skills = () => {
               className="skill"
               key={item.id}
               variants={textVariants}
-              whileHover={skillVariants.whileHover}
+              whileHover={{
+                scale: 1,
+                rotate: 360,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  repeat: 1,
+                  repeatType: "reverse",
+                  repeatDelay: 0.2,
+                },
+              }}
             >
               <motion.img src={item.img} alt="Skills Image" />
               <motion.p>{item.name}</motion.p>

@@ -142,5 +142,20 @@
         }
       }
     }
+    .message {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+
+      .laoding {
+        color: lightgray;
+      }
+      .error {
+        color: red;
+      }
+      .success {
+        color: green;
+      }
+    }
   }
 }

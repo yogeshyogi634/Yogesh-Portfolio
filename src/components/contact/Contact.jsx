@@ -27,6 +27,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
   const isInView = useInView(ref, { margin: "-100px" });
 
   // const sendEmail = (e) => {
@@ -56,6 +57,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -83,17 +85,20 @@ const Contact = () => {
             )
             .then(
               () => {
+                setLoading(false);
                 setSuccess(true);
                 setName("");
                 setEmail("");
                 setMessage("");
               },
               () => {
+                setLoading(false);
                 setError(true);
               }
             );
         },
         () => {
+          setLoading(false);
           setError(true);
         }
       );
@@ -183,9 +188,12 @@ const Contact = () => {
             onChange={(e) => setMessage(e.target.value)}
           />
           <button>Submit</button>
-          <div style={{ textAlign: "center" }}>
-            {error && "Something went wrong!"}
-            {success && "Thank you for submitting:)"}
+          <div className="message">
+            {loading && <span className="loading">Loading...</span>}
+            {error && <span className="error">Something went wrong!</span>}
+            {success && (
+              <span className="success">Thank you for submitting :)</span>
+            )}
           </div>
         </motion.form>
       </div>

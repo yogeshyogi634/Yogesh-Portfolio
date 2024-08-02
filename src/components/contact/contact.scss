@@ -98,6 +98,10 @@
       flex-direction: column;
       gap: 20px;
 
+      @include mobile {
+        margin-bottom: 200px;
+      }
+
       input,
       textarea {
         padding: 20px;

@@ -29,6 +29,31 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
   const isInView = useInView(ref, { margin: "-100px" });
 
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       import.meta.env.VITE_SERVICE_ID,
+  //       import.meta.env.VITE_TEMPLATE_ID,
+  //       formRef.current,
+  //       {
+  //         publicKey: import.meta.env.VITE_PUBLIC_ID,
+  //       }
+  //     )
+  //     .then(
+  //       () => {
+  //         setSuccess(true);
+  //         setName("");
+  //         setEmail("");
+  //         setMessage("");
+  //       },
+  //       () => {
+  //         setError(true);
+  //       }
+  //     );
+  // };
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -43,10 +68,30 @@ const Contact = () => {
       )
       .then(
         () => {
-          setSuccess(true);
-          setName("");
-          setEmail("");
-          setMessage("");
+          // Send autoreply email
+          emailjs
+            .send(
+              import.meta.env.VITE_SERVICE_ID,
+              import.meta.env.VITE_AUTOREPLY_TEMPLATE_ID,
+              {
+                email: email, // Sender's email address
+                name: name,
+              },
+              {
+                publicKey: import.meta.env.VITE_PUBLIC_ID,
+              }
+            )
+            .then(
+              () => {
+                setSuccess(true);
+                setName("");
+                setEmail("");
+                setMessage("");
+              },
+              () => {
+                setError(true);
+              }
+            );
         },
         () => {
           setError(true);

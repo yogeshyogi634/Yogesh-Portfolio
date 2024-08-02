@@ -38,7 +38,7 @@ const Contact = () => {
         import.meta.env.VITE_TEMPLATE_ID,
         formRef.current,
         {
-          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+          publicKey: import.meta.env.VITE_PUBLIC_ID,
         }
       )
       .then(
@@ -139,8 +139,8 @@ const Contact = () => {
           />
           <button>Submit</button>
           <div style={{ textAlign: "center" }}>
-            {error && "ERROR"}
-            {success && "Thank you for submitting!"}
+            {error && "Something went wrong!"}
+            {success && "Thank you for submitting:)"}
           </div>
         </motion.form>
       </div>

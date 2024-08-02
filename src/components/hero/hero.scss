@@ -147,7 +147,6 @@
       object-fit: cover;
 
       @include desktop {
-        // object-fit: contain;
       }
       @include tablet {
         object-fit: contain;
@@ -162,7 +161,6 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
-    z-index: 10; // Ensure it's below the wrapper's z-index
-    pointer-events: none; // Make sure it doesn't block pointer events
+    pointer-events: none;
   }
 }

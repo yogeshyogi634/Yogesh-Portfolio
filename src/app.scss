@@ -48,3 +48,20 @@ section {
     @content;
   }
 }
+
+/* The entire scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; /* Width of the scrollbar */
+}
+
+/* The scrollbar track */
+::-webkit-scrollbar-track {
+  border-radius: 10px; /* Optional: adds rounded corners to the track */
+}
+
+/* The scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: white; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Optional: adds rounded corners to the thumb */
+}

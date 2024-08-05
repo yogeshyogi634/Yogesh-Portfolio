@@ -59,15 +59,24 @@ const Skills = () => {
               className="skill"
               key={item.id}
               variants={textVariants}
+              // whileHover={{
+              //   scale: 1,
+              //   rotate: 360,
+              //   opacity: 1,
+              //   transition: {
+              //     duration: 1,
+              //     repeat: 1,
+              //     repeatType: "reverse",
+              //     repeatDelay: 0.2,
+              //   },
+              // }}
               whileHover={{
-                scale: 1,
-                rotate: 360,
-                opacity: 1,
+                scale: [1, 1.1],
+                rotate: [0, 360],
+                borderRadius: ["5%", "50%"],
                 transition: {
-                  duration: 1,
-                  repeat: 1,
-                  repeatType: "reverse",
-                  repeatDelay: 0.2,
+                  duration: 0.5,
+                  ease: "easeInOut",
                 },
               }}
             >

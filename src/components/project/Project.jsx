@@ -6,23 +6,30 @@ const items = [
   {
     id: 1,
     name: "Youtube Clone",
-    img: "https://images.pexels.com/photos/3227986/pexels-photo-3227986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: "/youtube-image.webp",
     desc: "Built a YouTube clone using ReactJS, Styled Components, Node.js, Express.js, and MongoDB with user authentication and video streaming features.",
     demo: "https://github.com/yogeshyogi634/Youtube-Clone",
   },
   {
     id: 2,
-    name: "Gaian Solution Website",
-    img: "https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    desc: "Created a company marketing website using React, Tailwind CSS, SCSS, Firebase, EmailJS, and Framer Motion for dynamic functionality, real-time database management, seamless email integration, and sleek animations.",
-    demo: "https://www.gaiansolutions.com/",
+    name: "ChatGPT-Clone",
+    img: "/chatgpt.jpeg",
+    desc: "Built a ChatGPT clone using ReactJS, SCSS, Node.js, Express.js, and MongoDB. The project features a user-friendly interface and robust backend functionality",
+    demo: "https://github.com/yogeshyogi634/ChatGPT-Clone",
   },
   {
     id: 3,
     name: "E-Commerce Website",
-    img: "https://images.pexels.com/photos/6214476/pexels-photo-6214476.jpeg?auto=compress&cs=tinysrgb&w=600",
+    img: "/e-commerce.webp",
     desc: "Built an e-commerce website using React, SCSS, and Strapi, incorporating seamless product management and a user-friendly shopping experience.",
     demo: "https://github.com/yogeshyogi634/E-Commerce-App",
+  },
+  {
+    id: 4,
+    name: "Gaian Solution Website",
+    img: "/website.webp",
+    desc: "Developed a company marketing website using React, Tailwind CSS, SCSS, Firebase, EmailJS, and Framer Motion for dynamic features, real-time data, email integration, and animations.",
+    demo: "https://www.gaiansolutions.com/",
   },
 ];
 

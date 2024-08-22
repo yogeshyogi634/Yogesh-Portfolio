@@ -5,27 +5,35 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 const items = [
   {
     id: 1,
+    name: "Spotify Clone",
+    img: "https://images.pexels.com/photos/16773548/pexels-photo-16773548/free-photo-of-youtube-music-stream-songs-and-music-videos-app-on-the-display-of-smartphone-or-tablet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    desc: "Created a Spotify Clone using ReactJS, JavaScript, and Tailwind CSS. Focused on dynamic features, real-time data, and responsive design for a seamless user experience.",
+    demo: "https://github.com/yogeshyogi634/Spotify-Clone",
+  },
+  {
+    id: 2,
     name: "Youtube Clone",
     img: "/youtube-image.webp",
     desc: "Built a YouTube clone using ReactJS, Styled Components, Node.js, Express.js, and MongoDB with user authentication and video streaming features.",
     demo: "https://github.com/yogeshyogi634/Youtube-Clone",
   },
   {
-    id: 2,
-    name: "ChatGPT-Clone",
+    id: 3,
+    name: "ChatGPT Clone",
     img: "/chatgpt.jpeg",
     desc: "Built a ChatGPT clone using ReactJS, SCSS, Node.js, Express.js, and MongoDB. The project features a user-friendly interface and robust backend functionality",
     demo: "https://github.com/yogeshyogi634/ChatGPT-Clone",
   },
   {
-    id: 3,
+    id: 4,
     name: "E-Commerce Website",
     img: "/e-commerce.webp",
     desc: "Built an e-commerce website using React, SCSS, and Strapi, incorporating seamless product management and a user-friendly shopping experience.",
     demo: "https://github.com/yogeshyogi634/E-Commerce-App",
   },
+
   {
-    id: 4,
+    id: 5,
     name: "Gaian Solution Website",
     img: "/website.webp",
     desc: "Developed a company marketing website using React, Tailwind CSS, SCSS, Firebase, EmailJS, and Framer Motion for dynamic features, real-time data, email integration, and animations.",
